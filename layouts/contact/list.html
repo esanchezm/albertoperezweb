@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="contact-page">
+  <div class="contact-accent-line"></div>
+  <h2 class="contact-title">Hablemos</h2>
+  <p class="contact-text">
+    Disponible para proyectos de cine, publicidad, documentales y videoclips.<br>
+    Basado en Madrid, disponible para viajar.
+  </p>
+
+  <a href="mailto:{{ .Site.Params.email }}" class="contact-email">{{ .Site.Params.email }}</a>
+
+  <div class="contact-social">
+    {{ with .Site.Params.social.instagram }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">Instagram</a>{{ end }}
+    {{ with .Site.Params.social.vimeo }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">Vimeo</a>{{ end }}
+    {{ with .Site.Params.social.imdb }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">IMDb</a>{{ end }}
+  </div>
+
+  <div class="contact-footer-note">
+    <p>También puedes encontrarme en Madrid para un café y hablar de tu proyecto.</p>
+  </div>
+</div>
+{{ end }}

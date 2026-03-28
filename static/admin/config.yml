@@ -1,0 +1,52 @@
+backend:
+  name: github
+  repo: esanchezm/albertoperezweb
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: work
+    label: "Projects"
+    folder: content/work
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select",
+          options: ["Documental", "Cortometraje", "Comercial", "Videoclip", "Largometraje"] }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Hero Image", name: "hero_image", widget: "image" }
+      - { label: "Gallery", name: "gallery", widget: "list",
+          field: { label: "Image", name: "image", widget: "image" } }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Director", name: "director", widget: "string" }
+      - { label: "Camera", name: "camera", widget: "string", required: false }
+      - { label: "Lenses", name: "lenses", widget: "string", required: false }
+      - { label: "Vimeo ID", name: "vimeo_id", widget: "string", required: false }
+      - { label: "Sort Order", name: "weight", widget: "number", default: 10 }
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  - name: stills
+    label: "Photography"
+    folder: content/stills
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Sort Order", name: "weight", widget: "number", default: 10 }
+
+  - name: pages
+    label: "Pages"
+    files:
+      - label: "About"
+        name: about
+        file: content/about/_index.md
+        fields:
+          - { label: "Portrait", name: "portrait", widget: "image" }
+          - { label: "Equipment", name: "equipment", widget: "list",
+              field: { label: "Item", name: "item", widget: "string" } }
+          - { label: "Bio", name: "body", widget: "markdown" }

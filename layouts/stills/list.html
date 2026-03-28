@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="stills-page">
+  <h2 class="stills-page__title">Stills</h2>
+  <div class="stills-masonry">
+    {{ range $i, $still := .Pages.ByWeight }}
+    <div class="still-item reveal" data-delay="{{ mul $i 60 }}">
+      <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

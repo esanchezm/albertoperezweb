@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="hero">
+  <div class="hero__bg" style="background-image: url('https://picsum.photos/seed/hero1/1600/900');"></div>
+  <div class="hero__content">
+    <div class="hero__accent-line"></div>
+    <h1 class="hero__title">{{ .Site.Params.tagline | default "Historias contadas con luz" }}</h1>
+    <p class="hero__subtitle">{{ .Site.Params.subtitle | default "Director de Fotografía · Madrid" }}</p>
+  </div>
+</div>
+
+<div class="project-grid">
+  {{ range $i, $project := (where .Site.RegularPages "Section" "work").ByWeight }}
+  <a href="{{ .RelPermalink }}" class="project-card reveal" data-delay="{{ mul $i 80 }}">
+    <img class="project-card__img" src="{{ .Params.thumbnail }}" alt="{{ .Title }}" loading="lazy">
+    <div class="project-card__overlay">
+      <span class="project-card__category">{{ .Params.category }}</span>
+      <span class="project-card__title">{{ .Title }}</span>
+    </div>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

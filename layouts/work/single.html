@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="project-detail">
+  <a href="/" class="detail-back">
+    <span class="detail-back__arrow">&larr;</span> Volver a proyectos
+  </a>
+
+  <div class="detail-hero">
+    <img src="{{ .Params.hero_image }}" alt="{{ .Title }}">
+  </div>
+
+  <div class="detail-content">
+    <div class="detail-meta">
+      <span class="detail-meta__category">{{ .Params.category }}{{ with .Date }} · {{ .Format "2006" }}{{ end }}</span>
+      <h2 class="detail-meta__title">{{ .Title }}</h2>
+      <div class="detail-meta__description">
+        {{ .Content }}
+      </div>
+    </div>
+
+    <div class="detail-credits">
+      {{ with .Params.role }}
+      <div class="credit-row">
+        <span class="credit-row__label">Rol</span>
+        <span class="credit-row__value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.director }}
+      <div class="credit-row">
+        <span class="credit-row__label">Director</span>
+        <span class="credit-row__value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.camera }}
+      <div class="credit-row">
+        <span class="credit-row__label">Cámara</span>
+        <span class="credit-row__value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.lenses }}
+      <div class="credit-row">
+        <span class="credit-row__label">Ópticas</span>
+        <span class="credit-row__value">{{ . }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ with .Params.vimeo_id }}
+  <div class="detail-vimeo">
+    <iframe src="https://player.vimeo.com/video/{{ . }}?title=0&byline=0&portrait=0" allowfullscreen></iframe>
+  </div>
+  {{ end }}
+
+  {{ with .Params.gallery }}
+  <div class="detail-gallery">
+    {{ range . }}
+    <img src="{{ . }}" alt="" loading="lazy">
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

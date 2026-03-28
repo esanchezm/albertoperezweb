@@ -1,0 +1,17 @@
+baseURL = "/"
+languageCode = "es"
+title = "Alberto Pérez — Director de Fotografía"
+
+[params]
+  tagline = "Historias contadas con luz"
+  subtitle = "Director de Fotografía · Madrid"
+  email = "alberto@dominio.com"
+  description = "Portfolio de Alberto Pérez, Director de Fotografía en Madrid. Cine, documentales, publicidad y videoclips."
+
+[params.social]
+  imdb = ""
+  vimeo = ""
+  instagram = ""
+
+[markup.goldmark.renderer]
+  unsafe = true

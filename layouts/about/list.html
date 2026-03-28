@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="about-page">
+  <div class="about-grid">
+    <div>
+      <div class="about-portrait">
+        <img src="{{ .Params.portrait | default "https://picsum.photos/seed/about1/600/800" }}" alt="Alberto Pérez">
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="about-accent-line"></div>
+      <h2 class="about-title">Sobre Alberto</h2>
+      <div class="about-bio">
+        {{ .Content }}
+      </div>
+
+      {{ with .Params.equipment }}
+      <div class="about-equipment">
+        <span class="about-equipment__label">Equipo habitual</span>
+        <div class="about-equipment__tags">
+          {{ range . }}
+          <span class="equipment-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+      <div class="about-social">
+        {{ with .Params.social }}
+          {{ with .imdb }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">IMDb</a>{{ end }}
+          {{ with .vimeo }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">Vimeo</a>{{ end }}
+          {{ with .instagram }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">Instagram</a>{{ end }}
+        {{ else }}
+          {{ with $.Site.Params.social.imdb }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">IMDb</a>{{ end }}
+          {{ with $.Site.Params.social.vimeo }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">Vimeo</a>{{ end }}
+          {{ with $.Site.Params.social.instagram }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">Instagram</a>{{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
