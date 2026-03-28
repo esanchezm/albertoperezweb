@@ -1,5 +1,6 @@
 backend:
   name: github
+  base_url: https://tinins.steve-o.org
   repo: esanchezm/albertoperezweb
   branch: main
 
