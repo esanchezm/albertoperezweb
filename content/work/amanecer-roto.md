@@ -3,7 +3,7 @@ draft: false
 title: Amanecer roto en horizonte
 date: 2022-04-15
 category: Largometraje
-thumbnail: https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/10/18174515/lijang.jpg?tr=w-1366,f-jpg,pr-true
+thumbnail: /images/rice-field.webp
 hero_image: https://picsum.photos/seed/cin8hero/1600/686
 gallery:
   - https://picsum.photos/seed/det81/800/500
