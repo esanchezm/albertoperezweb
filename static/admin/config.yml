@@ -1,6 +1,6 @@
 backend:
   name: github
-  base_url: https://tinins.steve-o.org
+  base_url: https://alberto-auth.steve-o.org
   auth_endpoint: /oauth/auth
   repo: esanchezm/albertoperezweb
   branch: main
