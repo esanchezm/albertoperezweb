@@ -3,7 +3,7 @@ draft: false
 title: Amanecer roto en horizonte
 date: 2022-04-15
 category: Largometraje
-thumbnail: https://picsum.photos/seed/cin8/800/500
+thumbnail: /images/profile.jpeg
 hero_image: https://picsum.photos/seed/cin8hero/1600/686
 gallery:
   - https://picsum.photos/seed/det81/800/500
