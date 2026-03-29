@@ -1,10 +1,13 @@
 {{ define "main" }}
+{{ $heroImg := .Params.hero_image | default "/images/hero.jpg" }}
+{{ $tagline := .Params.tagline | default (.Site.Params.tagline | default "Historias contadas con luz") }}
+{{ $subtitle := .Params.subtitle | default (.Site.Params.subtitle | default "Director de Fotografía · Madrid") }}
 <div class="hero">
-  <div class="hero__bg" style="background-image: url('https://picsum.photos/seed/hero1/1600/900');"></div>
+  <div class="hero__bg" style="background-image: url('{{ $heroImg }}');"></div>
   <div class="hero__content">
     <div class="hero__accent-line"></div>
-    <h1 class="hero__title">{{ .Site.Params.tagline | default "Historias contadas con luz" }}</h1>
-    <p class="hero__subtitle">{{ .Site.Params.subtitle | default "Director de Fotografía · Madrid" }}</p>
+    <h1 class="hero__title">{{ $tagline }}</h1>
+    <p class="hero__subtitle">{{ $subtitle }}</p>
   </div>
 </div>
 

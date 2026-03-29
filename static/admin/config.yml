@@ -44,6 +44,13 @@ collections:
   - name: pages
     label: "Pages"
     files:
+      - label: "Homepage"
+        name: home
+        file: content/_index.md
+        fields:
+          - { label: "Hero Image", name: "hero_image", widget: "image", hint: "Background image for the homepage hero section" }
+          - { label: "Tagline", name: "tagline", widget: "string", hint: "Main heading (e.g. Historias contadas con luz)" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", hint: "Below the tagline (e.g. Director de Fotografía · Madrid)" }
       - label: "About"
         name: about
         file: content/about/_index.md
@@ -52,3 +59,9 @@ collections:
           - { label: "Equipment", name: "equipment", widget: "list",
               field: { label: "Item", name: "item", widget: "string" } }
           - { label: "Bio", name: "body", widget: "markdown" }
+      - label: "Contact"
+        name: contact
+        file: content/contact/_index.md
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Availability", name: "body", widget: "markdown", hint: "Availability text shown on the contact page" }
