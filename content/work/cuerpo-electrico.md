@@ -15,6 +15,7 @@ camera: "Sony Venice 2"
 lenses: "Zeiss Supreme Prime"
 weight: 7
 draft: false
+description: "Cuerpo eléctrico — Cortometraje experimental sobre cuerpo y tecnología con iluminación LED programable. Fotografía de Alberto Pérez."
 ---
 
 Cortometraje experimental que explora la relación entre el cuerpo humano y la tecnología. Una pieza visual donde la iluminación LED programable crea patrones que interactúan con el movimiento de los intérpretes.

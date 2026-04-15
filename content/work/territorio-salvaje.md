@@ -15,6 +15,7 @@ camera: "RED V-Raptor"
 lenses: "Zeiss Supreme Prime"
 weight: 5
 draft: false
+description: "Territorio salvaje — Documental sobre la reintroducción del lobo ibérico en Castilla y León. Fotografía de Alberto Pérez."
 ---
 
 Documental sobre la reintroducción del lobo ibérico en zonas rurales de Castilla y León. Un trabajo de observación paciente donde la cámara se convierte en testigo silencioso de la coexistencia entre fauna salvaje y comunidades locales.

@@ -15,6 +15,7 @@ camera: "RED V-Raptor"
 lenses: "Cooke Anamorphic/i"
 weight: 3
 draft: false
+description: "Nómadas — Campaña publicitaria de equipamiento outdoor rodada en el Pirineo aragonés. Dirección de fotografía de Alberto Pérez."
 ---
 
 Campaña publicitaria para una marca de equipamiento outdoor que captura el espíritu de la aventura y la conexión con la naturaleza. Rodada en localizaciones remotas del Pirineo aragonés durante el otoño.

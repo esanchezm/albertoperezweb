@@ -15,6 +15,7 @@ camera: "Sony Venice 2"
 lenses: "Cooke S7/i Full Frame"
 weight: 4
 draft: false
+description: "Crisálida — Videoclip de coreografía contemporánea sobre transformación personal. Fotografía de Alberto Pérez con Sony Venice 2."
 ---
 
 Videoclip musical que representa la transformación personal a través de una coreografía contemporánea. La iluminación evoluciona desde tonos fríos y restrictivos hacia cálidos y expansivos, acompañando el arco narrativo de la pieza.

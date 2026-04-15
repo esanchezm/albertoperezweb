@@ -3,13 +3,70 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="author" content="Alberto Pérez">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph */}}
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{ with .Params.thumbnail }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
-{{ with .Params.hero_image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="es_ES">
+{{- $ogImage := "" -}}
+{{- with .Params.thumbnail }}{{ $ogImage = . }}{{ end -}}
+{{- with .Params.hero_image }}{{ $ogImage = . }}{{ end -}}
+{{- if eq $ogImage "" }}{{ $ogImage = .Site.Params.defaultImage }}{{ end -}}
+{{- with $ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+
+{{/* Twitter Card */}}
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{- with $ogImage }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+
+{{/* JSON-LD Structured Data */}}
+{{- $desc := .Site.Params.description -}}
+{{- with .Params.description }}{{ $desc = . }}{{ end -}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ .Site.Title }},
+  "url": {{ .Site.BaseURL }},
+  "description": {{ $desc }},
+  "author": {
+    "@type": "Person",
+    "name": "Alberto Pérez",
+    "jobTitle": "Director de Fotografía",
+    "url": {{ .Site.BaseURL }}
+  }
+}
+</script>
+{{ else if eq .Section "work" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ .Title }},
+  "url": {{ .Permalink }},
+  "description": {{ $desc }},
+  "author": {
+    "@type": "Person",
+    "name": "Alberto Pérez",
+    "jobTitle": "Director de Fotografía"
+  }{{ with .Params.director }},
+  "director": {
+    "@type": "Person",
+    "name": {{ . }}
+  }{{ end }}{{ with .Params.category }},
+  "genre": {{ . }}{{ end }}{{ with .Params.date }},
+  "dateCreated": {{ (time .).Format "2006-01-02" }}{{ end }}{{ with .Params.thumbnail }},
+  "image": {{ . | absURL }}{{ end }}
+}
+</script>
+{{ end }}
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">

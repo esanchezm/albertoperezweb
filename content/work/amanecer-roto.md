@@ -15,6 +15,7 @@ director: Carlos Herrera
 camera: ARRI Alexa Mini LF
 lenses: Cooke S7/i Full Frame
 weight: 8
+description: "Amanecer roto en horizonte — Largometraje de drama social en la España vaciada. Alberto Pérez como 2nd Unit DP."
 ---
 Largometraje de drama social ambientado en la España vaciada. Como director de fotografía de segunda unidad, el trabajo se centró en los paisajes y las escenas de transición que conectan los actos narrativos principales.
 

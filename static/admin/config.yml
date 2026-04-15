@@ -29,6 +29,7 @@ collections:
       - { label: "Lenses", name: "lenses", widget: "string", required: false }
       - { label: "Vimeo ID", name: "vimeo_id", widget: "string", required: false }
       - { label: "Sort Order", name: "weight", widget: "number", default: 10 }
+      - { label: "SEO Description", name: "description", widget: "string", required: false, hint: "Short description for search engines and social media (max ~160 characters)" }
       - { label: "Description", name: "body", widget: "markdown" }
 
   - name: stills
@@ -40,6 +41,7 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Sort Order", name: "weight", widget: "number", default: 10 }
+      - { label: "SEO Description", name: "description", widget: "string", required: false, hint: "Short description for search engines and social media (max ~160 characters)" }
 
   - name: pages
     label: "Pages"
@@ -51,6 +53,7 @@ collections:
           - { label: "Hero Image", name: "hero_image", widget: "image", hint: "Background image for the homepage hero section" }
           - { label: "Tagline", name: "tagline", widget: "string", hint: "Main heading (e.g. Historias contadas con luz)" }
           - { label: "Subtitle", name: "subtitle", widget: "string", hint: "Below the tagline (e.g. Director de Fotografía · Madrid)" }
+          - { label: "SEO Description", name: "description", widget: "string", required: false, hint: "Short description for search engines and social media" }
       - label: "About"
         name: about
         file: content/about/_index.md
@@ -58,10 +61,12 @@ collections:
           - { label: "Portrait", name: "portrait", widget: "image" }
           - { label: "Equipment", name: "equipment", widget: "list",
               field: { label: "Item", name: "item", widget: "string" } }
+          - { label: "SEO Description", name: "description", widget: "string", required: false, hint: "Short description for search engines and social media" }
           - { label: "Bio", name: "body", widget: "markdown" }
       - label: "Contact"
         name: contact
         file: content/contact/_index.md
         fields:
           - { label: "Email", name: "email", widget: "string" }
+          - { label: "SEO Description", name: "description", widget: "string", required: false, hint: "Short description for search engines and social media" }
           - { label: "Availability", name: "body", widget: "markdown", hint: "Availability text shown on the contact page" }

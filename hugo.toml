@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://centella.vision/"
 languageCode = "es"
 title = "Alberto Pérez — Director de Fotografía"
 
@@ -7,11 +7,16 @@ title = "Alberto Pérez — Director de Fotografía"
   subtitle = "Director de Fotografía · Madrid"
   email = "alberto@dominio.com"
   description = "Portfolio de Alberto Pérez, Director de Fotografía en Madrid. Cine, documentales, publicidad y videoclips."
+  defaultImage = "/images/hero.jpg"
 
 [params.social]
   imdb = ""
   vimeo = ""
   instagram = ""
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
 
 [markup.goldmark.renderer]
   unsafe = true

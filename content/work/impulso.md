@@ -15,6 +15,7 @@ camera: "ARRI Alexa Mini LF"
 lenses: "Cooke Anamorphic/i"
 weight: 6
 draft: false
+description: "Impulso — Spot publicitario de deporte urbano en Madrid, rodado en una noche. Dirección de fotografía de Alberto Pérez."
 ---
 
 Spot publicitario que captura la energía del deporte urbano en Madrid. Rodado en una sola noche con un equipo mínimo, aprovechando la iluminación de la ciudad como fuente principal de luz.

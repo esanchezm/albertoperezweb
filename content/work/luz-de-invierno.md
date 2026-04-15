@@ -15,6 +15,7 @@ camera: "ARRI Alexa Mini LF"
 lenses: "Cooke S7/i Full Frame"
 weight: 1
 draft: false
+description: "Luz de invierno — Documental sobre las últimas tradiciones rurales del norte de España. Fotografía de Alberto Pérez con ARRI Alexa Mini LF."
 ---
 
 Una exploración visual que busca capturar la esencia del momento a través de la composición y el uso deliberado de la luz natural. Cada plano está diseñado para transmitir emoción sin necesidad de palabras.

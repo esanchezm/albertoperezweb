@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "Alberto Pérez, Director de Fotografía en Madrid. Más de una década de experiencia en cine, documentales y publicidad."
 portrait: "https://picsum.photos/seed/about1/600/800"
 equipment:
   - "ARRI Alexa Mini LF"

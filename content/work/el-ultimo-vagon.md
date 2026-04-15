@@ -15,6 +15,7 @@ camera: "ARRI Alexa Mini LF"
 lenses: "Zeiss Supreme Prime"
 weight: 2
 draft: false
+description: "El último vagón — Cortometraje sobre la soledad y el paso del tiempo en un tren nocturno. Fotografía de Alberto Pérez."
 ---
 
 Un cortometraje que explora la soledad y el paso del tiempo a través de los últimos viajeros de un tren nocturno. La fotografía juega con las luces artificiales del vagón contra la oscuridad exterior para crear un espacio íntimo y claustrofóbico.
