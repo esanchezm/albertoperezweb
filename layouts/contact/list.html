@@ -7,7 +7,8 @@
     Basado en Madrid, disponible para viajar.
   </p>
 
-  <a href="mailto:{{ .Site.Params.email }}" class="contact-email">{{ .Site.Params.email }}</a>
+  {{ $email := .Site.Params.email }}{{ with .Params.email }}{{ $email = . }}{{ end }}
+  <a href="mailto:{{ $email }}" class="contact-email">{{ $email }}</a>
 
   <div class="contact-social">
     {{ with .Site.Params.social.instagram }}<a href="{{ . }}" class="social-link" target="_blank" rel="noopener">Instagram</a>{{ end }}
